@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Border</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #pseudo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 300px;
+            height: 300px;
+            border: double dodgerblue 5px;
+        }
+
+        #pseudo::after {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            content: '';
+            height: 100%;
+            width: 100%;
+            border: dashed dodgerblue 5px;
+        }
+
+        #multi {
+            position: absolute;
+            top: 20px;
+            left: 340px;
+            width: 500px;
+            height: 200px;
+            border-left: dotted 4px rebeccapurple;
+            border-top: solid rebeccapurple 4px;
+            border-right: double rebeccapurple 4px;
+            border-bottom: dashed rebeccapurple 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pseudo"></div>
+    <div id="multi"></div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Name List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        const nameInput = () => {
+            let namelist = [];
+            let name = prompt("Enter name:");
+            while (name.trim().toLowerCase() != "end") {
+                namelist.push(name);
+                name = prompt("Enter name:");
+            }
+            return namelist;
+        }
+        var names = nameInput();
+        names.sort();
+        names.forEach((elem) => document.write(elem + "<br/>"));
+    </script>
+</body>
+
+</html>

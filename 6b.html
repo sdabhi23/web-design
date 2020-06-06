@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Table Deco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        th,
+        td {
+            padding: 10px;
+        }
+
+        tr>td:nth-child(4) {
+            column-count: 2;
+            column-rule-style: dotted;
+        }
+
+        thead>tr:nth-child(1)>th {
+            text-align: right;
+        }
+
+        thead>tr>th {
+            border-bottom: solid black;
+        }
+
+        tbody>tr:nth-child(even) {
+            background-color: #e3e3e3;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="border-bottom: solid black; width: 50%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th colspan="4">
+                    VALUE OF FRUITS IN &#8377 PER KG OR PER UNIT
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="2">
+                    Fruit crops
+                </th>
+                <th colspan="2">
+                    Year
+                </th>
+                <th rowspan="2" colspan="2">
+                    Description
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    2016
+                </th>
+                <th>
+                    2017
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    Mango
+                </th>
+                <td>
+                    &#8377 75
+                </td>
+                <td>
+                    &#8377 85
+                </td>
+                <td>
+                    Mangoes are juicy stone fruit (drupe) from numerous species of tropical trees belonging to the
+                    flowering plant genus Mangifera, cultivated mostly for their edible fruit.
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Lychee
+                </th>
+                <td>
+                    &#8377 23
+                </td>
+                <td>
+                    &#8377 25
+                </td>
+                <td>
+                    Lychee is the most reowned of a group of edible fruits of the soapberry family, Sapindacene. It is
+                    botanically designated Litchi chinensis Sonn.
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Banana
+                </th>
+                <td>
+                    &#8377 18
+                </td>
+                <td>
+                    &#8377 20
+                </td>
+                <td>
+                    The banana plant is the largest herbaceous flowering plant. All the above ground parts of a banana
+                    plant grow from a structure usually called a "corm".
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Pomelo
+                </th>
+                <td>
+                    &#8377 45
+                </td>
+                <td>
+                    &#8377 50
+                </td>
+                <td>
+                    The pomelo, Citrus maxima or Citrus grandis, also called pomello, pummelo, batabi or jambura
+                    (Bengali), is a natural (non-hybrid) citrus fruit, similar in appearance to a large grapefruit,
+                    native to South and Southeast Asia.
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">
+                    REPORT FOR THE YEAR 2016 AND 2017
+                </th>
+            </tr>
+        </tfoot>
+        <caption align="bottom">Caption: Fruit Table</caption>
+    </table>
+</body>
+
+</html>

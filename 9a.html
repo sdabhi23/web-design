@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Digit to Number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Enter the size of first array"));
+        var a = [], b = [];
+        for (var i = 0; i < n; i++) {
+            a.push(parseInt(prompt("Enter element " + i + ":")));
+        }
+        var m = parseInt(prompt("Enter the size of second array"));
+        for (var i = 0; i < m; i++) {
+            b.push(parseInt(prompt("Enter element " + i + ":")));
+        }
+        document.write("1st array: " + a + "<br/>");
+        document.write("2nd array: " + b + "<br/>");
+        var c = a.concat(b);
+        document.write("Merged array with duplicates: " + c + "<br/>");
+        var d = c.filter((item, pos) => c.indexOf(item) == pos);
+        document.write("Merged array without duplicates: " + d + "<br/>");
+    </script>
+</body>
+
+</html>

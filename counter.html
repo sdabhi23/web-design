@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #prev {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right:25px solid green;
+        }
+        #next {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left:25px solid green;
+        }
+        #num {
+            width: 100px;
+            height: 100px;
+            display: block;
+            font-size: 5em;
+            margin: 0 50px;
+            text-align: center;
+            color:crimson;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <span id="prev" onclick="reduce()"></span><span id=num>0</span><span id="next" onclick="increase()"></span>
+    <script>
+        var max = parseInt(prompt("Enter the max limit"));
+        var numWindow = document.getElementById("num");
+        const reduce = () => {
+            var val = parseInt(numWindow.innerHTML);
+            if(val > 0) {
+                numWindow.innerHTML = (val - 1);
+            } else {
+                alert("You have reached the beginning.");
+            }
+        };
+        const increase = () => {
+            var val = parseInt(numWindow.innerHTML);
+            if(val < max) {
+                numWindow.innerHTML = (val + 1);
+            } else {
+                alert("You have reached the end.");
+            }
+        };
+    </script>
+</body>
+</html>

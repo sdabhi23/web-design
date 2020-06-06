@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            counter-reset: section;
+        }
+
+        h2::before {
+            counter-increment: section;
+            content: "Section "counter(section) ". ";
+        }
+
+        p::before {
+            counter-increment: subsection;
+            content: counter(section) "."counter(subsection) " ";
+        }
+
+        div {
+            counter-reset: subsection;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>HTML tutorials</h2>
+    <div>
+        <p>HTML tutorial</p>
+        <p>XHTML tutorial</p>
+        <p>CSS tutorial</p>
+    </div>
+    <h2>Scripting tutorials</h2>
+    <div>
+        <p>JavaScript</p>
+        <p>VBScript</p>
+    </div>
+    <h2>XML tutorials</h2>
+    <div>
+        <p>XML</p>
+        <p>XSl</p>
+    </div>
+</body>
+
+</html>

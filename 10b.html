@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>JS Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		label, input {
+			margin: 5px 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="#" method="post" onsubmit="return validation()" name="formvalid">
+		<h1>Registration Form</h1>
+		<br />
+		<label>IP Address</label>
+		<input type="text" id="ip">
+		<br />
+		<label>Address</label>
+		<input type="text" id="add">
+		<br />
+		<label>Email-id</label>
+		<input type="text" id="email">
+		<br />
+		<label>Enter password</label>
+		<input type="password" id="pswd" value="1234"><a href="#" onclick="toggle('pswd');" id="showhide">Show</a>
+		<br />
+		<label>Confirm password</label>
+		<input type="password" id="cpswd">
+		<br />
+		<label>Phone Number</label>
+		<input type="text" name="" id="phone">
+		<br />
+		<label>Date of Birth</label>
+		<input type="text" name="" id="date">
+		<br />
+		<input type="submit">
+		<br />
+		<input type="reset">
+	</form>
+
+	<script>
+		const isDottedIPv4 = (s) => {
+			var match = s.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
+			return match != null &&
+				match[1] <= 255 && match[2] <= 255 &&
+				match[3] <= 255 && match[4] <= 255;
+		}
+		function validation() {
+			var x = document.getElementById("ip").value;
+			var str = /^[0-9]+\.+[0-9]+\.+[0-9]+\.+[0-9]$/;
+			if (x == "") {
+				alert("IP Adress is empty.");
+				return false;
+			}
+			if (!isDottedIPv4(x)) {
+				alert("The IP Address is not in the proper format.");
+				return false;
+			}
+			var x1 = document.getElementById("add").value;
+			var str1 = /^[A-Za-z0-9]$/;
+			if (x1 == "") {
+				alert("Addresss is empty.");
+				return false;
+			}
+			if (!x1.match(str1)) {
+				alert("Special characters are not allowed in address.");
+				return false;
+			}
+			var x2 = document.getElementById("email").value;
+			var str2 = /^([A-Za-z0-9._]{2,10})+\@([a-z]{5,8})+\.([a-z]{2,3})$/;
+			if (x2 == "") {
+				alert("Email id is empty.");
+				return false;
+			}
+			if (!x2.match(str2)) {
+				alert("Please enter your email id in the proper format!!");
+				return false;
+			}
+			var x3 = document.getElementById("pswd").value;
+			var str3 = /^[A-Za-z0-9@_#$^&*]{7,14}$/;
+			if (x3 == "") {
+				alert("Password is empty.");
+				return false;
+			}
+			if (!x3.match(str3)) {
+				alert("Lenght of password should be between 7 and 14.");
+				return false;
+			}
+			var x4 = document.getElementById("cpswd").value;
+			if (x4 == "") {
+				alert("The passwords  do not match.");
+				return false;
+			}
+			if (x3 != x4) {
+				alert("The passwords do not match.");
+				return false;
+			}
+			var x5 = document.getElementById("phone").value;
+			if (x5 == "") {
+				alert("Phone number is empty.");
+				return false;
+			}
+			var str4 = /^[0-9]{10,20}$/;
+			if (!x5.match(str4)) {
+				alert("The number must be of 10 digits.");
+				return false;
+			}
+			var x6 = document.getElementById("date").value;
+			if (x6 == "") {
+				alert("Date is empty.");
+				return false;
+			}
+			var str5 = /^[0-9]{1,2}+\.+[0-9]{1,2}+\.+[0-9]{4,4}$/;
+			if (!x6.match(str5)) {
+				alert("Date is not in correct format.");
+				return false;
+			}
+		}
+		function toggle(target) {
+			var d = document;
+			var tag = d.getElementById(target);
+			var tag2 = d.getElementById("showhide");
+			if (tag2.innerHTML == 'Show') {
+				tag.setAttribute('type', 'text');
+				tag2.innerHTML = 'Hide';
+			}
+			else {
+				tag.setAttribute('type', 'password');
+				tag2.innerHTML = 'Show';
+			}
+		}
+	</script>
+</body>
+
+</html>

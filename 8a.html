@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS checkerboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Enter size of board", 8));
+        let result = "";
+        for (let x = 0; x < n; x++) {
+            for (let z = 0; z < n; z++) {
+                if (((z + x) % 2) != 0) {
+                    result += " ";
+                } else {
+                    result += "*";
+                }
+            }
+            result += "\n";
+        }
+        document.body.innerHTML = '<pre>' + result + '</pre>';
+    </script>
+</body>
+
+</html>

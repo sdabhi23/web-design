@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Greeting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        const dt = new Date();
+        var greet = "";
+        var hour = parseInt(dt.getHours());
+        if (hour < 10) {
+            greet += "Good morning, ";
+        } else if (hour < 12) {
+            greet += "Soon time for lunch, ";
+        } else if (hour < 18) {
+            greet += "Good day, ";
+        } else if (hour < 22) {
+            greet += "Good evening, ";
+        } else {
+            greet += "Good night, ";
+        }
+        greet += dt.toLocaleDateString() + " " + dt.toLocaleTimeString();
+        document.write(greet);
+    </script>
+</body>
+
+</html>

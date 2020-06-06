@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Div Deco</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		#one {
+			border-top-left-radius: 100%;
+			border-top-right-radius: 0%;
+			border-bottom-left-radius: 0%;
+			border-bottom-right-radius: 100%;
+			height: 100px;
+			width: 100px;
+		}
+
+		#two {
+			border-top-left-radius: 0%;
+			border-top-right-radius: 100%;
+			border-bottom-left-radius: 100%;
+			border-bottom-right-radius: 0%;
+			height: 100px;
+			width: 100px;
+		}
+
+		#three {
+			border-top-left-radius: 75%;
+			border-top-right-radius: 0%;
+			border-bottom-left-radius: 0%;
+			border-bottom-right-radius: 100%;
+			height: 100px;
+			width: 100px;
+		}
+
+		#four {
+			border-top-left-radius: 0%;
+			border-top-right-radius: 75%;
+			border-bottom-left-radius: 100%;
+			border-bottom-right-radius: 0%;
+			height: 100px;
+			width: 100px;
+			background-color: #73ad21;
+		}
+
+		#five {
+			border-top-left-radius: 0%;
+			border-top-right-radius: 100%;
+			border-bottom-left-radius: 75%;
+			border-bottom-right-radius: 0%;
+			height: 100px;
+			width: 100px;
+			background-color: #73ad21;
+		}
+
+		#six {
+			border-top-left-radius: 100%;
+			border-top-right-radius: 0%;
+			border-bottom-left-radius: 0%;
+			border-bottom-right-radius: 75%;
+			height: 100px;
+			width: 100px;
+		}
+
+		td {
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>
+				<div style="height:200px; width:200px;float:left">
+					<div id="four" style="float:right; background-color: #1256ad;"></div>
+					<div id="three" style="background-color: #ad1289;"></div>
+					<div id="six" style="float:right; background-color:black ;"></div>
+					<div id="five" style="background-color: #73ad21;"></div>
+				</div>
+			</td>
+			<td>
+				<div style="height:200px; width:200px;">
+					<div id="two" style="float:right; background-color:black ;"></div>
+					<div id="one" style="background-color: #73ad21;"></div>
+					<div id="one" style="float:right; background-color: #1256ad;"></div>
+					<div id="two" style="background-color: #ad1289;"></div>
+				</div>
+			</td>
+			<td>
+				<div style="height:200px; width:200px;">
+					<div id="one" style="float:right; background-color: #1256ad;"></div>
+					<div id="two" style="background-color: #ad1289;"></div>
+					<div id="two" style="float:right; background-color:black ;"></div>
+					<div id="one" style="background-color: #73ad21;"></div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Digit to Number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        var n = parseInt(prompt("Enter the number of digits", 4));
+        var array = new Array(n);
+        var num = 0;
+        for (let i = 0; i < array.length; i++) {
+            num = num * 10;
+            var temp = parseInt(prompt("Enter digit " + i.toString()));
+            num += temp;
+            document.writeln("Digit " + i.toString() + ": " + temp.toString() + "<br/>");
+        }
+        document.write("Final number: " + num.toString());
+        console.log(num);
+    </script>
+</body>
+
+</html>

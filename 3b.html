@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function updateTextInput(val) {
+			// body...
+			document.getElementById('textInput').value = val;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Student Information</legend>
+			<label>Roll Number:<input type="text" name=""></label><br>
+			<label>Name: <input type="text" name=""></label><br>
+			<label>Parent's Name:<input type="text" name=""></label><br>
+			<label>Image: <input type="file" name="file" accept="image/*"></label><br>
+			<label>Gender: <input type="radio" name="gender" value="male" checked="checked">Male&nbsp;<input type="radio" name="gender" value="female">Female
+			</label><br>
+			<label>Semster:
+				<select>
+					<option value="I">I</option>
+					<option value="II">II</option>
+					<option value="III">III</option>
+					<option value="IV">IV</option>
+					<option value="V">V</option>
+					<option value="VI">VI</option>
+					<option value="VII">VII</option>
+					<option value="VIII">VIII</option>
+				</select>
+			</label><br>
+			<label>Address:<br>
+				<textarea cols="30" wrap="physical" placeholder="Enter Your Address"></textarea>
+			</label><br>
+			<label>Age:20<input type="range" name="" min="20" max="65" onchange="updateTextInput(this.value)">65=&nbsp;<input type="text" id="textInput" name="" value="">
+			</label><br>
+		</fieldset>
+		<input type="button" name="" value="Submit Form">
+	</form>
+</body>
+</html>

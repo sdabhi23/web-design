@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS Humanize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        const humanize = (num) => {
+            if (num < 1 || num > 10) {
+                alert("Enter a number between 1 and 10!");
+                return;
+            }
+
+            if (num % 10 >= 4 && num % 10 <= 9)
+                return num + "<sup>th</sup>";
+
+            switch (num % 10) {
+                case 1: return num + "<sup>st</sup>";
+                case 2: return num + "<sup>nd</sup>";
+                case 3: return num + "<sup>rd</sup>";
+            }
+        }
+        let testNum = parseInt(prompt("Enter a number between 1 and 10:"));
+        let res = humanize(testNum);
+        if (res != undefined) {
+            document.write("The value of " + testNum + " is " + res);
+        }
+    </script>
+</body>
+
+</html>

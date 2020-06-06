@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Character Frequency</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table {
+            border-collapse: collapse;
+            border: black 1px;
+        }
+        td {
+            width: 50px;
+            text-align: center;
+        }
+        th {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var userStr = prompt("Enter your string");
+        document.write(`<p><b>You entered:</b> ${userStr}</p>\n`);
+        userStr = userStr.toLowerCase();
+        var strFreq = [...userStr].filter((e,i) => userStr.indexOf(e) == i);
+        chars = []
+        console.log(strFreq);
+        strFreq.forEach(e => {
+            chars.push([e, userStr.split(e).length - 1]);
+        });
+        console.log(chars);
+        res = "<table border=\"1\">\n<tr>\n<th>char</th>\n<th>freq</th>\n</tr>\n";
+        chars.forEach(e => res += `<tr>\n<td>${e[1]}</td>\n<td>${e[0]}</td>\n</tr>\n`);
+        res += "</table>";
+        document.write(res);
+    </script>
+</body>
+</html>
